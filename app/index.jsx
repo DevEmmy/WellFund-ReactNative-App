@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import { StatusBar } from 'expo-status-bar'
 import { Link, useRouter } from 'expo-router'
 
-const index = ()=> {
+const Index = ()=> {
   const router = useRouter();
 
     return (
@@ -26,4 +26,4 @@ const index = ()=> {
     )
   }
 
-export default index
+export default Index
