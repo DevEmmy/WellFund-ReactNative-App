@@ -1,29 +1,33 @@
-import { SafeAreaView, Text, TouchableOpacity, View } from 'react-native'
+import { Image, SafeAreaView, Text, TouchableOpacity, View } from 'react-native'
 import React, { Component } from 'react'
 import { StatusBar } from 'expo-status-bar'
 import { Link, useRouter } from 'expo-router'
+import splash from "./splash.jpg"
 
-const Index = ()=> {
+const Index = () => {
   const router = useRouter();
 
-    return (
-      <SafeAreaView>
-        <StatusBar />
+  return (
+    <SafeAreaView className="bg-primary2 h-[120vh]  ">
+      <StatusBar />
 
-        <Text className="mt-16 text-[20px] font-bold text-center uppercase">WellFund</Text>
+      <View className="flex flex-col h-[100vh]  justify-between">
+        <Image source={{ uri: "https://img.freepik.com/free-photo/close-up-brussels-sprouts-table-with-pills_23-2148431512.jpg?t=st=1719174611~exp=1719178211~hmac=9aec602be90d8e36a9c55b0389bd12fe16b67707bf30f49089a169863aed0fe1&w=360" }} className="w-full mx-auto object-cover h-[60vh]" />
 
-        <View className="min-h-[30vh] w-full  bg-[#a29595] text-white px-[5.7%] py-20 mt-6">
-          <Text className=" text-center font-extrabold text-white text-[60px]">Get what you need today, pay over time.</Text>
-          <Text className="font-[]  text-center text-white text-[20px]">Introducing a new way to pay for everything over a long period of time and live a pressure free life.</Text>
+        <View className="w-11/12 mx-auto flex flex-col gap-y-3 text-white">
+        <Text className="text-[40px] font-bold text-white">Your Daily Needs Simplified</Text>
+          <Text className="text-[16px] text-white font-semibold">
+            Access Essential Goods Food and Pharmaceuticals Delivered to Your Door
 
-          
-            <TouchableOpacity onPress={()=> router.push("/login")}  className="bg-blue-600 text-white my-5 w-[30%] mx-auto rounded-xl text-[16px] font-extrabold py-3 px-5">
-              <Text className="text-white w-fit text-center">Get Started</Text>
-            </TouchableOpacity>
-          
+          </Text>
+          <TouchableOpacity className="bg-white shadow-xl  py-5 rounded-2xl " onPress={()=> router.push("/login")}>
+            <Text className="text-black font-bold text-center text-[16px]">Get Started</Text>
+          </TouchableOpacity>
         </View>
-      </SafeAreaView>
-    )
-  }
+      </View>
+
+    </SafeAreaView>
+  )
+}
 
 export default Index

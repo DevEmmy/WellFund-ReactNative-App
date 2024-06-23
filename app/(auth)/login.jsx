@@ -20,7 +20,7 @@ const Login = () => {
             <TextInput passwordRules="" secureTextEntry={true}  className="border p-3 rounded-xl" placeholder='your password'/>
         </View>
 
-        <TouchableOpacity className="bg-blue-600 rounded-xl p-3 text-center w-full" onPress={submit}>
+        <TouchableOpacity className="bg-primary2 rounded-xl p-3 text-center w-full" onPress={submit}>
             <Text className="text-[16px] text-center text-white font-bold">Login</Text>
         </TouchableOpacity>
 
@@ -30,7 +30,7 @@ const Login = () => {
             <Text className="text-[16px] text-center text-black font-bold">Continue with Google</Text>
         </TouchableOpacity>
 
-        <Text className="my-3">I don't have an account yet, <Link href={"/sign-up"}  className='text-blue-600' > Sign up</Link></Text>
+        <Text className="my-3">I don't have an account yet, <Link href={"/sign-up"}  className='text-primary2 font-bold' > Sign up</Link></Text>
 
       </SafeAreaView>
   )

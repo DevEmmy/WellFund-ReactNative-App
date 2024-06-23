@@ -16,7 +16,7 @@ const SignUp = () => {
         <TextInput passwordRules="" secureTextEntry={true}  className="border p-3 rounded-xl" placeholder='your password'/>
     </View>
 
-    <TouchableOpacity className="bg-blue-600 rounded-xl p-3 text-center w-full">
+    <TouchableOpacity className="bg-primary2 rounded-xl p-3 text-center w-full">
         <Text className="text-[16px] text-center text-white font-bold">Sign up</Text>
     </TouchableOpacity>
 
@@ -26,7 +26,7 @@ const SignUp = () => {
         <Text className="text-[16px] text-center text-black font-bold">Continue with Google</Text>
     </TouchableOpacity>
 
-    <Text className="my-3">I have an account already, <Link href={"/login"} className='!text-blue-600'>Sign In</Link></Text>
+    <Text className="my-3">I have an account already, <Link href={"/login"} className='!text-primary2 font-bold'>Sign In</Link></Text>
 
   </SafeAreaView>
   )

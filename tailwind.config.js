@@ -6,8 +6,12 @@ module.exports = {
   ],
   theme: {
     extend: {
+      clipPath: {
+        'custom-polygon': 'polygon(0 0, 100% 0, 100% 56%, 0 81%)',
+      },
       colors: {
-        primary: "#4CAF50"
+        primary: "#2C3E50",
+        primary2: "#1ABC9C"
       }
     },
   },
