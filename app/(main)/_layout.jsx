@@ -65,13 +65,13 @@ export default function TabLayout({ children }) {
           )
         }} />
 
-        <Tabs.Screen name='help' options={{
-          title: "Help",
+        <Tabs.Screen name='notifications' options={{
+          title: "Notifications",
           headerShown: false,
           tabBarIcon: ({ color, focused }) => (
             <TabIcon
-              icon={'help-circle'}
-              name={"Help"}
+              icon={'bell'}
+              name={"Notifications"}
               focused={focused}
               color={color}
             />

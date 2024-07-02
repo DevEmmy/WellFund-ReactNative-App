@@ -23,7 +23,7 @@ const Main = () => {
         </View>
       </View>
 
-      <View className="mx-[5%] bg-black p-6 rounded-xl my-10 text-white shadow-lg">
+      <View className="mx-[5%] bg-black p-6 py-10 rounded-2xl my-10 text-white shadow-lg">
         <Text className="text-white text-[22px] font-semibold">What are you getting from us today</Text>
         <Text className="text-white text-[16px]">Discover your daily needs here.</Text>
       </View>
@@ -48,7 +48,7 @@ const Main = () => {
         </ScrollView>
       </View>
 
-      <View className="flex flex-col gap-y-1 my-5">
+      <ScrollView className="flex flex-col gap-y-1 my-5">
         <View className="">
           <Text className="text-[20px] text-black font-semibold px-5">Recently Added</Text>
         </View>
@@ -63,9 +63,9 @@ const Main = () => {
             })
           }
         </View>
-      </View>
+      </ScrollView>
 
-      <View className="flex flex-col gap-y-1 my-5">
+      <ScrollView className="flex flex-col gap-y-1 my-5">
         <View className="">
           <Text className="text-[20px] text-black font-semibold px-5">Featured Posts</Text>
         </View>
@@ -80,7 +80,7 @@ const Main = () => {
             })
           }
         </View>
-      </View>
+      </ScrollView>
 
     </ScrollView>
   )
