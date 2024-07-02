@@ -5,30 +5,33 @@ import ProductCard from '../../Components/Product/ProductCard';
 
 const Main = () => {
   return (
-    <ScrollView className="flex flex-col h-full w-full" >
-
-      <View className="flex items-center justify-between  flex-row pt-10 px-[5%]">
-        <Text className="font-semibold text-[24px] text-gray-700">WellFund.</Text>
-
-        <View className="flex flex-row gap-x-3 items-center">
-          <View className="p-3 border rounded-full border-gray-200">
-            <Icon name='heart' size={20} color={"rgb(107,114,128)"} />
+    <ScrollView className="flex flex-col h-full w-full mt-14" >
+      <View className=" px-[5%] flex justify-between items-center flex-row">
+        <View className="flex justify-between items-center flex-row gap-5">
+          <View className="border-[5px] border-primary2 rounded-full">
+            <Image source={{ uri: "https://elcomercio.pe/resizer/snr5ZG3SKW8Q6fUMgys3XkOs4Jc=/1200x1200/smart/filters:format(jpeg):quality(90)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/FHVPWJMHKVFJ7MNVVGKJZL5JA4.png" }} width={60} height={60} className="rounded-full " />
           </View>
 
-          <View className="">
-            <Icon name='shopping-cart' size={20} color={"rgb(107,114,128)"} />
+          <View>
+            <Text className="text-[18px]">Greetings 👋</Text>
+            <Text className="text-[20px] font-semibold">Emmanuel Olaosebikan</Text>
           </View>
+        </View>
+
+        <View className="flex items-center justify-center p-3 rounded-full border border-gray-500">
+          <Icon name="shopping-cart" size={20} color="gray" />
         </View>
       </View>
 
-      <View className="my-3 mx-[2%] flex flex-row items-center shadow-lg bg-white border-gray-300 border p-4 rounded-full justify-between box-border">
-        <Icon name='search' size={24} color={"rgb(107,114,128)"} />
-        <TextInput className=" text-[16px] w-full ml-2" placeholder='search here...' />
+      <View className="mx-[5%] bg-black p-6 rounded-xl my-10 text-white shadow-lg">
+        <Text className="text-white text-[22px] font-semibold">What are you getting from us today</Text>
+        <Text className="text-white text-[16px]">Discover your daily needs here.</Text>
       </View>
+      
 
-      <View className="flex flex-col gap-y-2  mb-10">
-        <View className="bg-primary2 p-3 ">
-          <Text className="text-[16px] text-white font-semibold">Categories</Text>
+      <View className="flex flex-col gap-y-2 mx-[5%]">
+        <View className="">
+          <Text className="text-[20px] text-black font-semibold">Categories</Text>
         </View>
         <ScrollView horizontal={true} className="flex flex-row gap-x-5 overflow-scroll">
           {
@@ -45,34 +48,38 @@ const Main = () => {
         </ScrollView>
       </View>
 
-      <View className="flex flex-col my-10 gap-y-2">
-        <View className="bg-primary2 p-3 ">
-          <Text className="text-[16px] text-white font-semibold">Recently Added</Text>
+      <View className="flex flex-col gap-y-1 my-5">
+        <View className="">
+          <Text className="text-[20px] text-black font-semibold px-5">Recently Added</Text>
         </View>
-        <ScrollView horizontal={true} className="flex flex-row  overflow-scroll">
+        <View className="flex flex-1 flex-row flex-wrap gap-y-3">
           {
             [1, 2, 3, 4, 5].map((item, i) => {
               return (
-                <ProductCard key={i} />
+                <View className="" style={{ width: '50%' }} key={i} >
+                  <ProductCard key={i} />
+                </View>
               )
             })
           }
-        </ScrollView>
+        </View>
       </View>
 
-      <View className="flex flex-col my-10 gap-y-2">
-        <View className="bg-primary2 p-3 ">
-          <Text className="text-[16px] text-white font-semibold">Featured Products</Text>
+      <View className="flex flex-col gap-y-1 my-5">
+        <View className="">
+          <Text className="text-[20px] text-black font-semibold px-5">Featured Posts</Text>
         </View>
-        <ScrollView horizontal={true} className="flex flex-row overflow-scroll">
+        <View className="flex flex-1 flex-row flex-wrap gap-y-3">
           {
             [1, 2, 3, 4, 5].map((item, i) => {
               return (
-                <ProductCard key={i} />
+                <View className="" style={{ width: '50%' }} key={i} >
+                  <ProductCard />
+                </View>
               )
             })
           }
-        </ScrollView>
+        </View>
       </View>
 
     </ScrollView>
