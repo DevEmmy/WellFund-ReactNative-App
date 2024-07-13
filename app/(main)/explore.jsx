@@ -25,7 +25,7 @@ const Explore = () => {
           {
             [1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5,].map((item, i) => {
               return (
-                <View className="" style={{ width: '50%' }} key={i} >
+                <View className="" style={{ width: '100%' }} key={i} >
                   <ProductCard key={i} />
                 </View>
               )
