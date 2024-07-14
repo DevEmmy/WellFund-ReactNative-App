@@ -13,16 +13,25 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "assetFontPath": "assets/fonts"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#ffffff",
+        "assetFontPath": "assets/fonts"
       }
     },
     "web": {
-      "favicon": "./assets/favicon.png"
-    }
+      "favicon": "./assets/favicon.png",
+      "assetFontPath": "assets/fonts"
+    },
+    "plugins": [
+     [ "expo-font",
+      {
+        "fonts": ["node_modules/@expo-google-fonts/inter/Inter_900Black.ttf"]
+      }]
+    ]
   }
 }

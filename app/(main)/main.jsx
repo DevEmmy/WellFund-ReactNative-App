@@ -14,7 +14,7 @@ const Main = () => {
 
           <View>
             <Text className="text-[18px]">Greetings 👋</Text>
-            <Text className="text-[26px] font-bold">Emmanuel Olaosebikan</Text>
+            <Text className="text-[26px] font-bold"  style={{ fontFamily: ''}}>Emmanuel Olaosebikan</Text>
           </View>
         </View>
 

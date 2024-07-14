@@ -2,6 +2,7 @@ import { View, Text, ScrollView, Image } from 'react-native'
 import React from 'react'
 import Icon from 'react-native-vector-icons/Feather';
 import ProductCard from '../../Components/Product/ProductCard';
+// import ProductCard from '../../Components/Product/ProductCard';
 
 const Explore = () => {
   return (
@@ -10,8 +11,8 @@ const Explore = () => {
         <Text className="text-[24px] font-bold">Explore </Text>
 
         <View className="flex items-center flex-row gap-x-5">
-          <Icon name="shopping-cart" size={30} color="gray" />
-          <Icon name="search" size={30} color="gray" />
+          <Icon name="shopping-cart" size={24} color="gray" />
+          <Icon name="search" size={24} color="gray" />
         </View>
       </View>
 

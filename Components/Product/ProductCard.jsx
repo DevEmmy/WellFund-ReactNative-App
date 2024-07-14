@@ -1,9 +1,11 @@
 import { View, Text, Image, TouchableOpacity } from 'react-native'
 import React from 'react'
+import { useRouter } from 'expo-router'
 
 export default function ProductCard() {
+  const router = useRouter()
   return (
-    <View className="bg-white shadow p-2 rounded-2xl mx-2" >
+    <View className="bg-white shadow p-2 rounded-2xl mx-2" onTouchStart={()=> {router.push("/product/1")}}>
       <Image source={{ uri: "https://hips.hearstapps.com/vidthumb/images/delish-u-rice-2-1529079587.jpg?crop=1xw:1xh;center,top&resize=1200:*" }} className="w-full h-[200px] rounded-xl" />
 
       <View className="py-2 flex flex-col gap-y-1">
