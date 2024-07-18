@@ -23,6 +23,12 @@ export default function App() {
       <Stack.Screen name='(main)' options={{
         headerShown: false
       }} />
+      <Stack.Screen name='settings/settings' options={{
+        headerShown: false
+      }} />
+      <Stack.Screen name='settings/edit-profile' options={{
+        headerShown: false
+      }} />
     </Stack>
   );
 }
