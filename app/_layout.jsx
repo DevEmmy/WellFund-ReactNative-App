@@ -29,6 +29,12 @@ export default function App() {
       <Stack.Screen name='settings/edit-profile' options={{
         headerShown: false
       }} />
+      <Stack.Screen name='cart/cart' options={{
+        headerShown: false
+      }} />
+      <Stack.Screen name='cart/payment-plans' options={{
+        headerShown: false
+      }} />
     </Stack>
   );
 }

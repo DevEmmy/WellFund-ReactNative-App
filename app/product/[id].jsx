@@ -40,7 +40,7 @@ const EachProduct = () => {
                         {
                             repaymentOptions.map((item, i) => {
                                 return (
-                                    <View className={`border w-fit text-black p-2 rounded-lg border-gray-300 ${selected.includes(i) ? "bg-primary2 text-white" : "text-black"}`} onTouchStart={() => setSelected([...selected, i])}>
+                                    <View key={i} className={`border w-fit text-black p-2 rounded-lg border-gray-300 ${selected.includes(i) ? "bg-primary2 text-white" : "text-black"}`} onTouchStart={() => setSelected([...selected, i])}>
                                         <Text className={` ${selected.includes(i) && " text-white"}`}>{item.price} in {item.time}</Text>
                                     </View>
                                 )

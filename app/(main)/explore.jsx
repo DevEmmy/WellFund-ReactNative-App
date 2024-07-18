@@ -2,16 +2,18 @@ import { View, Text, ScrollView, Image } from 'react-native'
 import React from 'react'
 import Icon from 'react-native-vector-icons/Feather';
 import ProductCard from '../../Components/Product/ProductCard';
+import { useRouter } from 'expo-router';
 // import ProductCard from '../../Components/Product/ProductCard';
 
 const Explore = () => {
+  const router = useRouter()
   return (
     <ScrollView className="mt-14 ">
       <View className="flex flex-row px-3 gap-3 items-center justify-between">
         <Text className="text-[24px] font-bold">Explore </Text>
 
         <View className="flex items-center flex-row gap-x-5">
-          <Icon name="shopping-cart" size={24} color="gray" />
+          <Icon name="shopping-cart" size={24} color="gray" onTouchStart={()=> router.push("/cart/cart")}/>
           <Icon name="search" size={24} color="gray" />
         </View>
       </View>

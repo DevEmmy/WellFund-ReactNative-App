@@ -2,8 +2,10 @@ import { View, Text, SafeAreaView, TextInput, ScrollView, Image, TouchableOpacit
 import React from 'react'
 import Icon from 'react-native-vector-icons/Feather';
 import ProductCard from '../../Components/Product/ProductCard';
+import { useRouter } from 'expo-router';
 
 const Main = () => {
+  const router = useRouter()
   return (
     <ScrollView className="flex flex-col h-full w-full mt-14" >
       <View className=" px-[5%] flex justify-between items-center flex-row">
@@ -18,8 +20,8 @@ const Main = () => {
           </View>
         </View>
 
-        <View className="flex items-center justify-center p-3 rounded-full border border-gray-500">
-          <Icon name="shopping-cart" size={20} color="gray" />
+        <View className="flex items-center justify-center p-2 rounded-full border border-gray-500" onTouchStart={()=> router.push("/cart/cart")}>
+          <Icon name="shopping-cart" size={16} color="gray" />
         </View>
       </View>
 

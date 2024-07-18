@@ -79,7 +79,7 @@ const Profile = () => {
       </View>
 
       <View className="flex items-center justify-center my-10">
-        <Image source={{ uri: "https://elcomercio.pe/resizer/snr5ZG3SKW8Q6fUMgys3XkOs4Jc=/1200x1200/smart/filters:format(jpeg):quality(90)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/FHVPWJMHKVFJ7MNVVGKJZL5JA4.png" }} width={100} height={100} className="rounded-full " />
+        <Image source={{ uri: "https://elcomercio.pe/resizer/snr5ZG3SKW8Q6fUMgys3XkOs4Jc=/1200x1200/smart/filters:format(jpeg):quality(90)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/FHVPWJMHKVFJ7MNVVGKJZL5JA4.png" }} width={150} height={150} className="rounded-full " />
         <Text className="text-[24px] font-bold py-1">Emmanuel Olaosebikan</Text>
         <Text className="text-[16px] text-gray-400">Joined in 2024, Lagos</Text>
 
