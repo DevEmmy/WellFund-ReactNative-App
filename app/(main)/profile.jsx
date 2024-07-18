@@ -2,6 +2,7 @@ import { View, Text, ScrollView, Image, TouchableOpacity } from 'react-native'
 import React from 'react'
 import Icon from 'react-native-vector-icons/Feather';
 import LinearGradient from 'react-native-linear-gradient';
+import { useRouter } from 'expo-router';
 
 const Profile = () => {
 
@@ -29,6 +30,8 @@ const Profile = () => {
       sub: "Delete or Deactivate my account"
     }
   ]
+
+  const router = useRouter()
   return (
     // <ScrollView className="mt-14 px-3">
     //   <View className="flex flex-row gap-3">
@@ -70,7 +73,7 @@ const Profile = () => {
       <View className="flex items-center justify-center relative">
         <Text className="text-[24px] font-bold">Profile</Text>
 
-        <View className="absolute right-[5%]">
+        <View className="absolute right-[5%]" onTouchStart={()=> router.push("/settings/settings")}>
         <Icon name="settings" size={24} color="#000" />
         </View>
       </View>
@@ -81,7 +84,7 @@ const Profile = () => {
         <Text className="text-[16px] text-gray-400">Joined in 2024, Lagos</Text>
 
         <View>
-          <TouchableOpacity className="bg-gray-200 p-3 rounded-xl">
+          <TouchableOpacity className="bg-gray-200 p-3 rounded-xl" onPress={()=> router.push("/settings/edit-profile")}> 
             <Text className="text-[18px] font-bold">Edit Profile</Text>
           </TouchableOpacity>
         </View>
@@ -96,7 +99,7 @@ const Profile = () => {
             <Text className="text-gray-400">eolaosebikan60@gmail.com</Text>
           </View>
 
-          <Text className="font-bold text-[16px]">Change</Text>
+          <Text className="font-bold text-[14px]" onPress={()=> router.push("/settings/edit-profile")}>Change</Text>
         </View>
 
         <View className="flex flex-row items-center justify-between">
@@ -105,7 +108,7 @@ const Profile = () => {
             <Text className="text-gray-400">09048988583</Text>
           </View>
 
-          <Text className="font-bold text-[16px]">Change</Text>
+          <Text className="font-bold text-[14px]" onPress={()=> router.push("/settings/edit-profile")}>Change</Text>
         </View>
       </View>
 
