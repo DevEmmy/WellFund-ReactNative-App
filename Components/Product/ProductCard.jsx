@@ -5,7 +5,7 @@ import { useRouter } from 'expo-router'
 export default function ProductCard() {
   const router = useRouter()
   return (
-    <View className="bg-white shadow p-2 rounded-2xl mx-2" onTouchStart={()=> {router.push("/product/1")}}>
+    <View className="bg-white shadow p-2 rounded-2xl mx-2" >
       <Image source={{ uri: "https://hips.hearstapps.com/vidthumb/images/delish-u-rice-2-1529079587.jpg?crop=1xw:1xh;center,top&resize=1200:*" }} className="w-full h-[200px] rounded-xl" />
 
       <View className="py-2 flex flex-col gap-y-1">
@@ -14,7 +14,7 @@ export default function ProductCard() {
         </Text>
         <Text className="text-[16px] text-gray-400">Repayment in 5 days</Text>
         <TouchableOpacity className="bg-primary2 rounded-lg p-3 text-center">
-          <Text className="text-white font-bold text-center text-[16px]">Add to Cart</Text>
+          <Text className="text-white font-bold text-center text-[16px]" onTouchStart={()=> {router.push("/product/1")}}>Enquire</Text>
         </TouchableOpacity>
       </View>
     </View>
